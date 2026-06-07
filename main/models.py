@@ -5,7 +5,7 @@ class Certificate(models.Model):
     title = models.CharField(max_length=200, verbose_name="Sertifikat nomi")
     issuer = models.CharField(max_length=200, verbose_name="Bergan tashkilot")
     year = models.CharField(max_length=10, verbose_name="Yil")
-    image = models.ImageField(upload_to='certificates/', blank=True, null=True, verbose_name="Rasm (ixtiyoriy)")
+    image_url = models.URLField(blank=True, null=True, verbose_name="Rasm URL (imgbb.com dan)")
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:

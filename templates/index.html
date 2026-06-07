@@ -155,9 +155,9 @@
   <div class="cert-grid">
     {% for cert in certificates %}
     <div class="cert-card reveal">
-      <div class="cert-preview" {% if cert.image %}onclick="openModal('{{ cert.image.url }}')"{% endif %}>
-        {% if cert.image %}
-          <img src="{{ cert.image.url }}" alt="{{ cert.title }}">
+      <div class="cert-preview" {% if cert.image_url %}onclick="openModal('{{ cert.image_url }}')"{% endif %}>
+        {% if cert.image_url %}
+          <img src="{{ cert.image_url }}" alt="{{ cert.title }}">
           <div style="position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.6);color:var(--green);padding:3px 8px;border-radius:6px;font-size:0.7rem;">🔍 zoom</div>
         {% else %}
           🏆
